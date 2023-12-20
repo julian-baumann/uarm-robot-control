@@ -1,10 +1,9 @@
-var builder = WebApplication.CreateBuilder(args);
+using RoboGuidanceSystem.Services;
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+RegisterServices(builder.Services);
 builder.Services.AddControllers();
 
 var app = builder.Build();
@@ -19,3 +18,12 @@ if (app.Environment.IsDevelopment())
 app.UseRouting();
 app.MapControllers();
 app.Run();
+
+return 0;
+
+
+
+void RegisterServices(IServiceCollection serviceCollection)
+{
+    serviceCollection.AddSingleton<RobotCommunicationService>();
+}
