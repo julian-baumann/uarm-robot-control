@@ -9,7 +9,7 @@ public class UArmConnection : IDisposable
 {
     private readonly SerialPort _serialPort;
     private readonly Queue<QueueItem> _writeQueue = new();
-    private readonly HashSet<QueueItem> _readQueue = new();
+    private readonly HashSet<QueueItem> _readQueue = [];
     private readonly Thread _writeThread;
     private readonly Thread _readThread;
     private bool _readActive = false;
