@@ -4,6 +4,7 @@ using UArmSDK.Commands;
 
 namespace RoboGuidanceSystem.Controllers;
 
+[ApiController]
 [Route("move")]
 public class MoveController(RobotCommunicationService robotCommunicationService) : ControllerBase
 {
