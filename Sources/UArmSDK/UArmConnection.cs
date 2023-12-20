@@ -154,7 +154,7 @@ public class UArmConnection : IDisposable
                 }
                 else if (response.StartsWith('E'))
                 {
-                    Exception? exception = null;
+                    var exception = new Exception("Unknown error");
 
                     if (response.StartsWith("E20"))
                     {
@@ -169,10 +169,7 @@ public class UArmConnection : IDisposable
                         exception = new AddressOutOfRangeException();
                     }
 
-                    if (exception is not null)
-                    {
-                        requestResponse.SetError(exception);
-                    }
+                    requestResponse.SetError(exception);
                 }
 
                 _readQueue.Remove(requestResponse);
