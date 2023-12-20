@@ -1,0 +1,28 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboGuidanceSystem", "Sources\RoboGuidanceSystem\RoboGuidanceSystem.csproj", "{E5C6D0DE-CA18-4E21-829D-21BDB9674A7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UArmSDK", "Sources\UArmSDK\UArmSDK.csproj", "{C463E67B-667D-47D6-9993-BDD65A9853E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UArmSDK.Test", "Sources\UArmSDK.Test\UArmSDK.Test.csproj", "{5C9BF298-7BA1-48F9-95F0-E11554C48618}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5C6D0DE-CA18-4E21-829D-21BDB9674A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C6D0DE-CA18-4E21-829D-21BDB9674A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C6D0DE-CA18-4E21-829D-21BDB9674A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C6D0DE-CA18-4E21-829D-21BDB9674A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C463E67B-667D-47D6-9993-BDD65A9853E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C463E67B-667D-47D6-9993-BDD65A9853E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C463E67B-667D-47D6-9993-BDD65A9853E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C463E67B-667D-47D6-9993-BDD65A9853E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C9BF298-7BA1-48F9-95F0-E11554C48618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C9BF298-7BA1-48F9-95F0-E11554C48618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C9BF298-7BA1-48F9-95F0-E11554C48618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C9BF298-7BA1-48F9-95F0-E11554C48618}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
