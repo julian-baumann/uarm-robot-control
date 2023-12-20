@@ -2,13 +2,13 @@
 using UArmSDK.Commands;
 
 // var devices = UArmCommunication.GetDevices();
-var connection = UArmCommunication.Connect("/dev/tty.usbserial-AI04HYTO");
+using var connection = UArmCommunication.Connect("/dev/tty.usbserial-AI04HYTO");
 
 var response = await connection.Get<DeviceName>();
-Console.WriteLine(response.Name);
+Console.WriteLine($"Name: {response.Name}");
 
 var versionResponse = await connection.Get<SoftwareVersion>();
-Console.WriteLine(versionResponse.Version);
+Console.WriteLine($"Version: {versionResponse.Version}");
 
 var servoAngles = await connection.Get<CurrentServoAngles>();
 Console.WriteLine($"Angles: Bottom {servoAngles.BottomServo}, Left: {servoAngles.LeftServo} Right: {servoAngles.RightServo} Height: {servoAngles.HeightServo}");

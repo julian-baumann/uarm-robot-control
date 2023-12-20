@@ -79,7 +79,7 @@ public class UArmConnection : IDisposable
         _serialPort.Dispose();
     }
 
-    private async void WriteThread()
+    private void WriteThread()
     {
         while (_writeActive)
         {
@@ -97,7 +97,7 @@ public class UArmConnection : IDisposable
     }
 
 
-    private async void ReadThread()
+    private void ReadThread()
     {
         while (_readActive)
         {
