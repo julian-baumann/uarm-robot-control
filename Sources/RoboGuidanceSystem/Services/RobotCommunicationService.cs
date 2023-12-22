@@ -32,6 +32,6 @@ public class RobotCommunicationService
 
     public Task<TCommand> QueryCommand<TCommand>() where TCommand : CommandBase, IWithResponse
     {
-	    return _connection.Get<TCommand>();
+        return _connection.Get<TCommand>();
     }
 }

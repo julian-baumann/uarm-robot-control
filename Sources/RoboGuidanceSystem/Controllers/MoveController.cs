@@ -27,17 +27,16 @@ public class MoveController(RobotCommunicationService robotCommunicationService)
     [Route("absolute")]
     public async Task<ActionResult> MoveAbsolute([FromQuery] int x, [FromQuery] int y, [FromQuery] int z, [FromQuery] int speed)
     {
-	    await robotCommunicationService.ExecuteCommand(new MoveAbsolute(x, y, z, speed));
-
-	    return Ok();
+        await robotCommunicationService.ExecuteCommand(new MoveAbsolute(x, y, z, speed));
+        return Ok();
     }
 
     [HttpGet]
     [Route("gripperStatus")]
     public async Task<ActionResult> Gripper()
     {
-		var commandResult = await robotCommunicationService.QueryCommand<GripperStatus>();
-		
-		return Ok(commandResult.Grip);
+        var commandResult = await robotCommunicationService.QueryCommand<GripperStatus>();
+
+        return Ok(commandResult.Grip);
     }
 }
