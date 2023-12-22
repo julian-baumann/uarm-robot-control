@@ -154,7 +154,7 @@ public class UArmConnection : IDisposable
                 }
                 else if (response.StartsWith('E'))
                 {
-                    var exception = new Exception("Unknown error");
+                    var exception = new Exception($"Unknown error. Raw response: \"{response}\"");
 
                     if (response.StartsWith("E20"))
                     {

@@ -5,6 +5,8 @@ using UArmSDK.Commands;
 using var connection = UArmCommunication.Connect("/dev/tty.usbserial-AI04HYTO");
 
 var response = await connection.Get<DeviceName>();
+
+
 Console.WriteLine($"Name: {response.Name}");
 
 var versionResponse = await connection.Get<SoftwareVersion>();
