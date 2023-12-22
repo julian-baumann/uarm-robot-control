@@ -52,7 +52,7 @@ public class UArmConnection : IDisposable
         return taskCompletionSource.Task;
     }
 
-    public Task QueryCommand<TResponse>(TResponse command) where TResponse : CommandBase
+    public Task Execute<TResponse>(TResponse command) where TResponse : CommandBase
     {
         var taskCompletionSource = new TaskCompletionSource();
 
