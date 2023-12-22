@@ -24,7 +24,22 @@ public class UArmCommunication
 
         serialPort.Open();
 
-        return new UArmConnection(serialPort);
+        serialPort.Dispose();
+
+        serialPort = new SerialPort(
+	        portName: port,
+	        baudRate: 115200,
+	        parity: Parity.None,
+	        dataBits: 8,
+	        stopBits: StopBits.One
+        );
+
+        serialPort.NewLine = "\r\n";
+        serialPort.ReadTimeout = 5000;
+
+        serialPort.Open();
+    
+		return new UArmConnection(serialPort);
     }
 
 }

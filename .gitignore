@@ -4,3 +4,9 @@ obj/
 riderModule.iml
 /_ReSharper.Caches/
 .DS_Store
+
+.vs/
+
+.idea/.idea.RoboGuidanceSystem/.idea/.name
+
+*.user

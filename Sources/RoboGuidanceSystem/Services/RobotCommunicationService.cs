@@ -25,8 +25,13 @@ public class RobotCommunicationService
         return UArmCommunication.GetDevices();
     }
 
-    public Task QueryCommand<TCommand>(TCommand command) where TCommand : CommandBase
+    public Task ExecuteCommand<TCommand>(TCommand command) where TCommand : CommandBase
     {
-        return _connection.QueryCommand(command);
+        return _connection.Execute(command);
+    }
+
+    public Task<TCommand> QueryCommand<TCommand>() where TCommand : CommandBase, IWithResponse
+    {
+	    return _connection.Get<TCommand>();
     }
 }
